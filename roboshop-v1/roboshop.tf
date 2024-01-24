@@ -63,16 +63,16 @@ resource "aws_instance" "shipping" {
   }
 }
 resource "aws_instance" "rabbitmq" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  ami           = "ami-0f3c7d07486cad139"
+  instance_type = "t2.micro"
 
   tags = {
     Name = "rabbitmq"
   }
 }
 resource "aws_instance" "payment" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+  ami           = "ami-0f3c7d07486cad139"
+  instance_type = "t2.micro"
 
   tags = {
     Name = "payment"
