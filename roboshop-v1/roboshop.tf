@@ -173,7 +173,7 @@ resource "aws_instance" "dispatch" {
 }
 resource "aws_route53_record" "dispatch" {
   zone_id = "Z082591214E2K79TAHGZM"
-  name    = "payment-dev.sreddy.online"
+  name    = "dispatch-dev.sreddy.online"
   type    = "A"
   ttl     = 30
   records = [aws_instance.dispatch.private_ip]
