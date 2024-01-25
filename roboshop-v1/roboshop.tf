@@ -74,12 +74,12 @@ resource "aws_instance" "user" {
     Name = "user"
   }
 }
-resource "aws_route53_record" "redis" {
+resource "aws_route53_record" "user" {
   zone_id = "Z082591214E2K79TAHGZM"
-  name    = "redis-dev.sreddy.online"
+  name    = "user-dev.sreddy.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.redis.private_ip]
+  records = [aws_instance.user.private_ip]
 }
 resource "aws_instance" "cart" {
   ami           = "ami-0f3c7d07486cad139"
@@ -95,7 +95,7 @@ resource "aws_route53_record" "cart" {
   name    = "cart-dev.sreddy.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.redis.private_ip]
+  records = [aws_instance.cart.private_ip]
 }
 resource "aws_instance" "mysql" {
   ami           = "ami-0f3c7d07486cad139"
@@ -111,7 +111,7 @@ resource "aws_route53_record" "mysql" {
   name    = "mysql-dev.sreddy.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.redis.private_ip]
+  records = [aws_instance.mysql.private_ip]
 }
 resource "aws_instance" "shipping" {
   ami           = "ami-0f3c7d07486cad139"
@@ -138,12 +138,12 @@ resource "aws_instance" "rabbitmq" {
     Name = "rabbitmq"
   }
 }
-resource "aws_route53_record" "shipping" {
+resource "aws_route53_record" "rabbitmq" {
   zone_id = "Z082591214E2K79TAHGZM"
-  name    = "shipping-dev.sreddy.online"
+  name    = "rabbitmq-dev.sreddy.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance.shipping.private_ip]
+  records = [aws_instance.rabbitmq.private_ip]
 }
 resource "aws_instance" "payment" {
   ami           = "ami-0f3c7d07486cad139"
@@ -160,4 +160,21 @@ resource "aws_route53_record" "payment" {
   type    = "A"
   ttl     = 30
   records = [aws_instance.payment.private_ip]
+}
+
+resource "aws_instance" "dispatch" {
+  ami           = "ami-0f3c7d07486cad139"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = [ "sg-0738a0b37e3e0d683" ]
+
+  tags = {
+    Name = "dispatch"
+  }
+}
+resource "aws_route53_record" "dispatch" {
+  zone_id = "Z082591214E2K79TAHGZM"
+  name    = "payment-dev.sreddy.online"
+  type    = "A"
+  ttl     = 30
+  records = [aws_instance.dispatch.private_ip]
 }
