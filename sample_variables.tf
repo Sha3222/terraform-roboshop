@@ -1,10 +1,10 @@
 ## variables
 
 variables Name {
- default = "Shashank"
+ value = "Shashank"
 }
 
 ## Accessing the variables
 output you_name {
- default = var.Name
+ value = var.Name
 }
