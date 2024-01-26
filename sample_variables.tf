@@ -1,6 +1,6 @@
 ## variables
 
-variable Name {
+variable "Name" {
  value = "Shashank"
 }
 
