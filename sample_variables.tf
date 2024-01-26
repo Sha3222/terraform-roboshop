@@ -28,3 +28,9 @@ default = ["Apple" , "Orange" , "Mango"]
 output "fruits_names" {
  value = var.fruits[0]
 }
+output "fruits_names" {
+ value = var.fruits[1]
+}
+output "fruits_names" {
+ value = var.fruits[2]
+}
