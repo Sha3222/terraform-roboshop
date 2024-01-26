@@ -81,5 +81,5 @@ apple = 100
 ## variable in a combination of any other string then it needs to be with in  ${}
 
 output fruit_names {
-value = "fruit_name = ${var.fruit_info[apple]}"
+value = "fruit_name = ${var.fruit_info["apple"]}"
 }
