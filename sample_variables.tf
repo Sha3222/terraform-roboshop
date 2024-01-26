@@ -1,6 +1,7 @@
 ## variables
 
 variable "Name" {
+ type = string
  value = "Shashank"
 }
 
