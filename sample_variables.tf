@@ -64,9 +64,9 @@ variable "fruits_price_stock" {
 
 ## Accessing the map of variables
 output "fruits_stock_apple" {
- value = var.fruit_stock[apple]
+ value = var.fruit_stock["apple"]
 }
 
 output "fruits_price_stock_banana" {
- value = var.fruit_price_stock[banana]
+ value = var.fruit_price_stock["banana"]
 }
