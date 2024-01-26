@@ -2,10 +2,10 @@
 
 variable "Name" {
  type = string
- value = "Shashank"
+  default = "Shashank"
 }
 
 ## Accessing the variables
-output you_name {
+output "you_name" {
  value = var.Name
 }
