@@ -97,5 +97,5 @@ value = "fruit_name = ${var.fruit_info["apple"]}"
 }
 
 output "All_fruit_info" {
-value = "fruit_Name = ${fruit_details["apple"]} fruit_stock = ${fruit_details["apple"].stock} fruit_price = ${fruit_details["apple"].price}"
+value = "fruit_Name = ${var.fruit_details["apple"]} fruit_stock = ${var.fruit_details["apple"].stock} fruit_price = ${var.fruit_details["apple"].price}"
 }
