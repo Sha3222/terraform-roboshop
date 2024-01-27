@@ -83,7 +83,7 @@ default = {
 apple = {
  stock = 100
  price = 3
- type  = soft
+ type  = "soft"
 }
 banana = {
  stock = 200
