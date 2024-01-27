@@ -78,8 +78,24 @@ apple = 100
 }
 }
 
+variable "fruit_details" {
+default = {
+apple = {
+ stock = 100
+ price = 3
+}
+banana = {
+ stock = 200
+ price = 2
+}
+}
+}
 ## variable in a combination of any other string then it needs to be with in  ${}
 
-output fruit_names {
+output "fruit_names" {
 value = "fruit_name = ${var.fruit_info["apple"]}"
+}
+
+output "All_fruit_info" {
+value = "fruit_Name = ${fruit_details["apple"]} fruit_stock = ${fruit_details["apple"].stock} fruit_price = ${fruit_details["apple"].price}"
 }
