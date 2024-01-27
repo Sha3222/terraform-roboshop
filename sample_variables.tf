@@ -83,6 +83,7 @@ default = {
 apple = {
  stock = 100
  price = 3
+ type  = soft
 }
 banana = {
  stock = 200
@@ -97,5 +98,5 @@ value = "fruit_name = ${var.fruit_info["apple"]}"
 }
 
 output "All_fruit_info" {
-value = "fruit_Name = ${var.fruit_details["apple"]} fruit_stock = ${var.fruit_details["apple"].stock} fruit_price = ${var.fruit_details["apple"].price}"
+value = "fruit_type = ${var.fruit_details["apple"].type} fruit_stock = ${var.fruit_details["apple"].stock} fruit_price = ${var.fruit_details["apple"].price}"
 }
