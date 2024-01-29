@@ -47,5 +47,5 @@ resource "aws_route53_record" "DNS-records" {
  name    = "${lookup(each.value, "name", null)}.sreddy.online"
  type    = "A"
  ttl     = 30
- records = [lookkup(lookup(aws_instance.instances, each.key, null), "private_ip", null) ]
+ records = [lookup(lookup(aws_instance.instances, each.key, null), "private_ip", null) ]
 }
