@@ -1,4 +1,4 @@
-variables "components" {
+variable "components" {
 default = [ "frontend", "mongodb"]
 }
 
