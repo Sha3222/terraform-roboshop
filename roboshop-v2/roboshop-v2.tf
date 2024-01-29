@@ -38,13 +38,13 @@ resource "aws_instance" "instances" {
   vpc_security_group_ids = var.security_group
 
   tags = {
-    Name = lookup(each.key, each.value["name"], "null")
+    Name = lookup(each.key, "name", null)
   }
 }
 resource "aws_route53_record" "frontend" {
   for_each = var.components
   zone_id = var.zone
-  name    = "${lookup(each.value, each.key["name"], null)}.sreddy.online"
+  name    = "${lookup(each.value, "name", null)}.sreddy.online"
   type    = "A"
   ttl     = 30
   //records = [aws_instance.frontend.private_ip]
