@@ -41,14 +41,11 @@ resource "aws_instance" "instances" {
     Name = lookup(each.value, "name", null)
   }
 }
-//resource "aws_route53_record" "DNS-records" {
-//  for_each = var.components
- // zone_id = var.zone
- // name    = "${lookup(each.value, "name", null)}.sreddy.online"
- // type    = "A"
- // ttl     = 30
- // records = [lookup(aws_instance.instances, each.key[""] ) ]
-//}
-output "instance" {
-value = aws_instance.instances
+resource "aws_route53_record" "DNS-records" {
+ for_each = var.components
+ zone_id = var.zone
+ name    = "${lookup(each.value, "name", null)}.sreddy.online"
+ type    = "A"
+ ttl     = 30
+ records = [lookkup(lookup(aws_instance.instances, each.key, null), "private_ip", null) ]
 }
