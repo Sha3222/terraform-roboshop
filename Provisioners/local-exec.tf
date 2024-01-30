@@ -23,6 +23,9 @@ resource "aws_instance" "myec2" {
     Name = var.Name
   }
 provisioner "local-exec" {
-    command = "ansible aws_instance.myec2.public_ip -m ping"
+    environment = {
+    host = ${aws_instance.myec2.public_ip}
+    }
+    command = "ansible hosts -m ping"
   }
 }
