@@ -16,8 +16,8 @@ default = "pr_local"
 resource "aws_instance" "myec2" {
 
   ami                     =  var.ami
-  instance_type           =  var.security_group
-  vpc_security_group_ids  =  var.instance_type
+  instance_type           =  var.instance_type
+  vpc_security_group_ids  =  var.security_group
 
   tags = {
     Name = var.Name
