@@ -1,0 +1,36 @@
+>public ip address that are accessed over the internet.
+
+>There are two types of public ip address
+1. public ip (ipv4)
+2. private ip (ipv4)
+
+>Engineers developed NAT and private ip due to increase of public ip.
+
+>NAT>> Network Address Transmitter
+
+>NAT is used in routers to translates set of ip-address to another set of ip-address
+
+
+>public ip address are publicly registered on the internet.
+must have a public ip address to go on the internet
+
+
+>private ip address are not publicly registered. So, you can not access the internet with private ip.
+used internally home or business.
+
+>taking public ip for every device is expensive. So our router will assign an private ip to the devices
+
+>Our device trying to access the internet then our private ip address will be translated by NAT to public ip address.
+
+>NAT translates :
+private ip to public ip
+public ip to private ip
+
+
+
+>Subnet : It defines the set of local network area range.
+
+>Any network device potentially needs any three things:
+1. IP address
+2. subnet
+3. Gateway (ip address of router and gateway is the same thing.)
