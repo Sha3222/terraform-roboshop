@@ -12,8 +12,8 @@ variable "vpc" {
       app2 = { cidr = "10.0.3.0/16", az ="us-east-1b" }
     }
     db = {
-     db1 = { cidr = "10.0.4.0/16" az = "us-east-1a"}
-     db2 = { cidr = "10.0.5.0/16" az = "us-east-1b"}
+     db1 = { cidr = "10.0.4.0/16", az = "us-east-1a"}
+     db2 = { cidr = "10.0.5.0/16", az = "us-east-1b"}
     }
    }
   }
