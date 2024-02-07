@@ -20,7 +20,7 @@ variable "security-groups" {
 resource "aws_instance" "instance" {
   for_each               =  var.components
   ami                    =  var.ami
-  instance_type          =  var.instance_type
+  instance_type          =  var.instance-type
   vpc_security_group_ids =  var.security-groups
 
   tags = {
