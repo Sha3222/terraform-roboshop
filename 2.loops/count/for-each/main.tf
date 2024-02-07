@@ -1,7 +1,7 @@
 variable "components" {
  default = {
- frontend = { name = "frontend", peru = "first-instance"}
- mongodb  = { name = "mongodb", peru = "second-instance"}
+ frontend = { name = "frontend"}
+ mongodb  = { name = "mongodb"}
  }
 }
 
@@ -24,7 +24,7 @@ resource "aws_instance" "instance" {
   vpc_security_group_ids =  var.security-groups
 
   tags = {
-    Name = each.value.peru
+    Name = each.value.name
   }
 
 }
