@@ -1,5 +1,5 @@
 module "variables" {
-source = "./variables.tf"
+source = "./"
 }
 resource "aws_instance" "instance" {
 count = length(var.ec2)
