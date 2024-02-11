@@ -16,7 +16,7 @@ resource "aws_instance" "instances" {
 ami           = var.ami
 instance_type = var.instance-type
 vpc_security_group_ids = var.security-id
-count = var.ec2
+
 tags = {
  Name = var.ec2[count.index]
 }
