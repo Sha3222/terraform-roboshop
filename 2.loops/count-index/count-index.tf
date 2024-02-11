@@ -12,7 +12,7 @@ default = "t2.micro"
 }
 
 
-resource "aws-instance" "instances" {
+resource "aws_instance" "instances" {
 ami           = var.ami
 instance_type = var.instance_type
 vpc_security_group_ids = var.security-id
