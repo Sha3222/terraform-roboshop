@@ -13,12 +13,12 @@ default = "t2.micro"
 
 
 resource "aws_instance" "instances" {
-count = var.ec2
+count = length(var.ec2)
 ami           = var.ami
 instance_type = var.instance-type
 vpc_security_group_ids = var.security-id
 
 tags = {
- Name = count.index
+ Name = var.ec2[count.index]
 }
 }
