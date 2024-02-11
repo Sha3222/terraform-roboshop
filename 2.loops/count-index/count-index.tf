@@ -25,5 +25,6 @@ tags = {
 }
 
 output "ec2-name" {
-[for n in var.ec2 : upper(n)]
+[for n in var.ec2]
+value = n
 }
