@@ -18,6 +18,6 @@ instance_type = var.instance-type
 vpc_security_group_ids = var.security-id
 
 tags = {
- Name = var.ec2[count.index]
+ Name = var.ec2.${count.index}
 }
 }
