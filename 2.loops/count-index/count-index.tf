@@ -14,7 +14,7 @@ default = "t2.micro"
 
 resource "aws_instance" "instances" {
 ami           = var.ami
-instance_type = var.instance_type
+instance_type = var.instance-type
 vpc_security_group_ids = var.security-id
 count = 2
 tags = {
