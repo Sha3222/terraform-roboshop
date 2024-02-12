@@ -1,6 +1,6 @@
 module "variables" {
 source = "../variables"
-}
+
 resource "aws_instance" "instance" {
 count = length(var.ec2)
 ami           = var.ami
@@ -9,5 +9,6 @@ vpc_security_group_ids = var.security-id
 
 tags = {
  Name = var.ec2[count.index]
+}
 }
 }
