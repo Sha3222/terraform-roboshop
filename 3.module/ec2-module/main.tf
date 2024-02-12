@@ -1,5 +1,5 @@
 module "variables" {
-source = "./"
+source = "../variables"
 }
 resource "aws_instance" "instance" {
 count = length(var.ec2)
