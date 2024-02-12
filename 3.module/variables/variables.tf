@@ -4,7 +4,7 @@ default = [ "ec1", "ec2" ]
 variable "ami" {
 default = "ami-0f3c7d07486cad139"
 }
-variable "security-id" {
+variable "security-group" {
 default = [ "sg-0738a0b37e3e0d683" ]
  }
 variable "instance-type" {
