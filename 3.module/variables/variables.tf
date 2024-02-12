@@ -2,6 +2,7 @@ variable "ec2" {
 type = list
 default = [ "ec1", "ec2" ]
 }
+
 variable "ami" {
 type = string
 default = "ami-0f3c7d07486cad139"
