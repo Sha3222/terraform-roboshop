@@ -1,10 +1,10 @@
 resource "aws_instance" "instances" {
   ami           = var.ami
-  instance_type = var.components
+  instance_type = var.instance_type
   vpc_security_group_ids = var.security_group
 
   tags = {
-    Name = var.components
+    Name = var.name
   }
 }
 resource "aws_route53_record" "DNS-records" {
