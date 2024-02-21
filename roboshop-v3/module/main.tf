@@ -9,7 +9,7 @@ resource "aws_instance" "instances" {
 }
 resource "aws_route53_record" "DNS-records" {
  zone_id = var.zone_id
- name    = "${lookup(aws_instance.instances, "Name", null)}.sreddy.online"
+ name    = "${lookup(aws_instance.instances, "name", null)}.sreddy.online"
  type    = "A"
  ttl     = 30
  records = lookup(aws_instance.instances, "private_ip", null)
