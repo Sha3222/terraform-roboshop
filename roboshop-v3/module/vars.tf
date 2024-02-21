@@ -1,5 +1,5 @@
 variable "ami" {}
 variable "instance_type" {}
-variable "security_group" {}
+variable "security_groups" {}
 variable "name" {}
-variable "zone" {}
+variable "zone_id" {}
