@@ -8,6 +8,7 @@ resource "aws_instance" "instances" {
   }
 }
 resource "aws_route53_record" "DNS-records" {
+ zone_id = var.zone
  name    = "${lookup(each.value, "name", null)}.sreddy.online"
  type    = "A"
  ttl     = 30
