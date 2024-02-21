@@ -1,4 +1,4 @@
-module "ec2's" {
+module "ec2" {
 for_each = var.components
 source = "../module"
 ami           = var.ami
