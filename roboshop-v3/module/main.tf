@@ -12,6 +12,6 @@ resource "aws_route53_record" "DNS-records" {
  name    = "${var.name}.sreddy.online"
  type    = "A"
  ttl     = 30
- records = [var.aws_instance.instances.private_ip]
+ records = [aws_instance.instances.private_ip]
 }
 
