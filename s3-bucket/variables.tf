@@ -13,7 +13,3 @@ variable "Name" {
 variable "Environment" {
  default = "Test"
 }
-
-variable "region" {
- default = "us-east-1"
-}
