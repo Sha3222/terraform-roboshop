@@ -5,7 +5,7 @@ variable "acl" {
  default = "private"
 }
 variable "versioning" {
- default = "enabled"
+ default = "true"
 }
 variable "Name" {
  default = "Store_files@1"
