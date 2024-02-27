@@ -13,13 +13,13 @@ resource "aws_s3_bucket" "store_files" {
 }
 
 output "s3_bucket" {
- value = aws_s3_bucket.store_files
+ value = aws_s3_bucket.store_files.id
 }
 
-terraform {
-backend "s3" {
-    bucket = aws_s3_bucket.store_files.id
-    key    = "path/to/my/key"
-    region = "us-east-1"
-  }
-}
+//terraform {
+//backend "s3" {
+   // bucket =
+    //key    = "path/to/my/key"
+  //  region = "us-east-1"
+ // }
+//}
