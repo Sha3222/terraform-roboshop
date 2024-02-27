@@ -1,5 +1,5 @@
 variable "bucket" {
- default = "state_file_info@1"
+ default = "state_file_info1"
 }
 variable "acl" {
  default = "private"
