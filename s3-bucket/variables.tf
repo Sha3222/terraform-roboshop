@@ -1,5 +1,5 @@
 variable "bucket" {
- default = "water_store1"
+ default = "water_store1_Jonah1"
 }
 variable "acl" {
  default = "private"
