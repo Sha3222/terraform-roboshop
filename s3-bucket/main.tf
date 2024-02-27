@@ -16,9 +16,10 @@ output "s3_bucket" {
  value = aws_s3_bucket.store_files
 }
 
-
+terraform {
 backend "s3" {
     bucket = aws_s3_bucket.store_files.bucket
     key    = "path/to/my/key"
     region = "us-east-1"
   }
+}
