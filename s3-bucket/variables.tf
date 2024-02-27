@@ -1,5 +1,5 @@
 variable "bucket" {
- default = "state_file_info1"
+ default = "water_store1"
 }
 variable "acl" {
  default = "private"
