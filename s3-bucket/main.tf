@@ -18,7 +18,7 @@ output "s3_bucket" {
 
 terraform {
 backend "s3" {
-    bucket = aws_s3_bucket.store_files.bucket
+    bucket = aws_s3_bucket.store_files.id
     key    = "path/to/my/key"
     region = "us-east-1"
   }
