@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "store_files" {
  acl    = var.acl
  region = var.region
 
- versioning_configuration {
+ versioning {
    status = var.version_status
  }
 
