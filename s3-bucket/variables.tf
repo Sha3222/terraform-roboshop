@@ -4,7 +4,7 @@ variable "bucket" {
 variable "acl" {
  default = "private"
 }
-variable "version_status" {
+variable "versioning" {
  default = "enabled"
 }
 variable "Name" {

@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "store_files" {
  region = var.region
 
  versioning {
-   status = var.version_status
+   status = var.versioning
  }
 
  tags = {
