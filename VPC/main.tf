@@ -24,6 +24,6 @@ output "Result-vpc" {
 output "Result-gateway" {
  value = aws_internet_gateway.flipkart-gateway
 }
-output "Result-vpc" {
+output "Result-attach" {
  value = aws_internet_gateway_attachment.gate-way
 }
