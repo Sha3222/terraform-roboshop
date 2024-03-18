@@ -5,7 +5,7 @@ resource "aws_vpc" "vpc-1" {
  Name = "flipkart"
  }
 }
-#Creating and attaching the internet flipkar-gate way to vpc-1
+#Creating and attaching the internet flipkart-gate way to vpc-1
 
 resource "aws_internet_gateway" "flipkart-gateway" {
  vpc_id = "${aws_vpc.vpc-1.id}"
@@ -18,4 +18,16 @@ resource "aws_internet_gateway_attachment"  "gate-way" {
  vpc_id = "${aws_vpc.vpc-1.id}"
 }
 
-#create a subnets
+#creating a subnets
+resource "aws_subnet" "flipkart-subnets" {
+ for_each = var.info
+ vpc_id = "${aws_vpc.vpc-1.id}"
+ cidr_block = lookup(each.value, "cidr_block", null)
+ availability_zone = lookup(each.value, "availability_zone", null)
+
+ tags = {
+ Name = lookup(each.value, "Name", null)
+ }
+}
+
+
