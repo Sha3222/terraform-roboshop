@@ -1,4 +1,5 @@
 variable "info" {
+default = {
 flipkart-public-1a = {
 Name = "Flipkart-public-1a"
 cidr_block = "10.0.1.0/24"
@@ -28,5 +29,6 @@ flipkart-data-base-1b = {
 Name = "Flipkart-data-base-1a"
 cidr_block = "10.0.22.0/24"
 availability_zone = "us-east-2a"
+}
 }
 }
