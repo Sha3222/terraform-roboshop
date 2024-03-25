@@ -30,4 +30,14 @@ resource "aws_subnet" "flipkart-subnets" {
  }
 }
 
+#creating route tables
+create a route tables
+resource "aws_route_table" "route-tables" {
+ for_each = var.names
+ vpc_id = "${aws_vpc.vpc-1.id}"
+tags = {
+Name = lookup(each.value, "Name", null)
+}
+}
+
 

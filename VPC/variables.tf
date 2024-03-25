@@ -32,3 +32,16 @@ availability_zone = "us-east-2a"
 }
 }
 }
+
+variable "names" {
+default = {
+flipkart-public = {
+Name = "Flipkart-public-route"
+}
+flipkart-private = {
+Name = "Flipkart-private-route"
+}
+flipkart-private-database = {
+Name = "Flipkart-database-route"
+}
+}
